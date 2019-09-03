@@ -1,0 +1,20 @@
+# =IMAGE=
+
+![Pulls](https://img.shields.io/docker/pulls/=NAMESPACE=/=IMAGE=.svg)
+![Stars](https://img.shields.io/docker/stars/=NAMESPACE=/=IMAGE=.svg)
+
+My QML/Qt5 development environment with QtCreator,
+a [container image](https://hub.docker.com/r/=NAMESPACE=/=IMAGE=/) 
+based on [Debian](https://debian.org/) [Buster](https://wiki.debian.org/DebianBuster).
+
+This image is built daily and in case of any security update, the list of
+packages is updated, commited and this triggers update of docker-hub image
+and all dependant images.
+
+## Quick Usage
+
+Run prebuilt:
+
+    $ docker run --rm -ti --env DISPLAY=$DISPLAY \
+        --volume /tmp/.X11-unix:/tmp/.X11-unix:ro =NAMESPACE=/=IMAGE= qtcreator
+
