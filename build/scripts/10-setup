@@ -7,6 +7,7 @@ export DEBIAN_FRONTEND=noninteractive
 ## packages sorted alphabeticaly
 ##
 packages=""
+packages="${packages} build-essential"
 packages="${packages} chromium"
 packages="${packages} cmake"
 packages="${packages} gcc"
@@ -14,6 +15,7 @@ packages="${packages} g++"
 packages="${packages} qml"
 packages="${packages} qmlscene"
 packages="${packages} qtcreator"
+packages="${packages} qt5-default"
 packages="${packages} qt5-qmake"
 
 ## install packages
