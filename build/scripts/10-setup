@@ -7,10 +7,15 @@ export DEBIAN_FRONTEND=noninteractive
 ## packages sorted alphabeticaly
 ##
 packages=""
+packages="${packages} chromium"
+packages="${packages} cmake"
+packages="${packages} gcc"
+packages="${packages} g++"
 packages="${packages} qml"
 packages="${packages} qmlscene"
 packages="${packages} qtcreator"
 
 ## install packages
 ##
-apt-get install -y --no-install-recommends --auto-remove --purge ${packages}
+#apt-get install -y --no-install-recommends --auto-remove --purge ${packages}
+apt-get install -y --auto-remove --purge ${packages}
