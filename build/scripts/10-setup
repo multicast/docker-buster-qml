@@ -21,4 +21,4 @@ packages="${packages} qtcreator"
 apt-get install -y --auto-remove --purge ${packages}
 
 addgroup --gid 999 developer
-adduser --uid 999 --home /home/developer --shell /bin/bash --disabled-password developer
+adduser --uid 999 --gid 999 --home /home/developer --shell /bin/bash --disabled-password developer
