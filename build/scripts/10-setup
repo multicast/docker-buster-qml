@@ -15,6 +15,7 @@ packages="${packages} g++"
 packages="${packages} qml"
 packages="${packages} qmlscene"
 packages="${packages} qtcreator"
+packages="${packages} qtdeclarative5-dev"
 packages="${packages} qt5-default"
 packages="${packages} qt5-qmake"
 
