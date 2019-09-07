@@ -1,7 +1,7 @@
 #
 # Dockerfile
 #
-FROM mkovac/stretch:latest
+FROM mkovac/buster:latest
 LABEL MAINTAINER="matej.kovac@gmail.com"
 
 # files and scripts needed to build the image
