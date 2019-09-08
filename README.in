@@ -3,18 +3,35 @@
 ![Pulls](https://img.shields.io/docker/pulls/=NAMESPACE=/=IMAGE=.svg)
 ![Stars](https://img.shields.io/docker/stars/=NAMESPACE=/=IMAGE=.svg)
 
-My QML/Qt5 development environment with QtCreator,
-a [container image](https://hub.docker.com/r/=NAMESPACE=/=IMAGE=/) 
-based on [Debian](https://debian.org/) [Buster](https://wiki.debian.org/DebianBuster).
+This is my [Qt5 QML](https://doc.qt.io/qt-5/qtqml-index.html) development
+environment. Based on
+[Debian](https://debian.org/) [Buster](https://wiki.debian.org/DebianBuster)
+[container image](https://hub.docker.com/r/mkovac/buster), adding 
+common development tools and [QtCreator IDE](https://doc.qt.io/qtcreator/).
 
-This image is built daily and in case of any security update, the list of
-packages is updated, commited and this triggers update of docker-hub image
-and all dependant images.
+## Usage
 
-## Quick Usage
+I prefer to run container and a `bash` shell and keep this in background,
+then run `QtCreator` in other terminal. The following commands include
+necessary environment variables and switches for painless usage:
 
-Run prebuilt:
+    $ docker run --rm -ti --name qtcreator \
+        --device /dev/dri:/dev/dri \
+        --volume /tmp/.X11-unix:/tmp/.X11-unix \
+        --env DISPLAY=$DISPLAY \
+        --env http_proxy=http://proxy:3128 \
+        --env https_proxy=http://proxy:3128 \
+        --env QT_SELECT=qt5 \
+        --volume $HOME/qml:/home/developer/qml:Z \
+        =NAMESPACE=/=IMAGE= \
+        bash
+    $ docker exec -ti qtcreator su - developer -c qtcreator
 
-    $ docker run --rm -ti --env DISPLAY=$DISPLAY \
-        --volume /tmp/.X11-unix:/tmp/.X11-unix:ro =NAMESPACE=/=IMAGE= qtcreator
+## Notes
+
+If you like the image, star it. Send comments or package suggestions to
+include in daily build as [github issue or pull
+request](https://github.com/multicast/docker-buster-qml).
+
+# Packages
 

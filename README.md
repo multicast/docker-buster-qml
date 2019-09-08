@@ -32,6 +32,9 @@ necessary environment variables and switches for painless usage:
 If you like the image, star it. Send comments or package suggestions to
 include in daily build as [github issue or pull
 request](https://github.com/multicast/docker-buster-qml).
+
+# Packages
+
     Desired=Unknown/Install/Remove/Purge/Hold
     | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
     |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
