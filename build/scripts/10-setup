@@ -8,7 +8,6 @@ export DEBIAN_FRONTEND=noninteractive
 ##
 packages=""
 packages="${packages} build-essential"
-packages="${packages} chromium"
 packages="${packages} cmake"
 packages="${packages} gcc"
 packages="${packages} g++"
@@ -18,6 +17,17 @@ packages="${packages} qtcreator"
 packages="${packages} qtdeclarative5-dev"
 packages="${packages} qt5-default"
 packages="${packages} qt5-qmake"
+packages="${packages} qml-module-qtcharts"
+packages="${packages} qml-module-qtmultimedia"
+packages="${packages} qml-module-qtquick-controls2"
+packages="${packages} qml-module-qtquick-dialogs"
+packages="${packages} qml-module-qtquick-extras"
+packages="${packages} qml-module-qtquick-localstorage"
+packages="${packages} qml-module-qtquick-xmllistmodel"
+packages="${packages} qml-module-qttest"
+packages="${packages} qml-module-qtwebsockets"
+packages="${packages} qml-module-qtwebview"
+
 
 ## install packages
 ##
