@@ -10,4 +10,5 @@ source /etc/entrypoint.sh
 DEVUID=${DEVUID:=999}
 DEVGID=${DEVGID:=999}
 
+groupmod --gid ${DEVGID} developer
 usermod --uid ${DEVUID} --gid ${DEVGID} developer
