@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+source /etc/entrypoint.sh
+
+## environment variables
+##
+##   - DEVUID=<int>
+##   - DEVGID=<int>
+##
+
+DEVUID=${DEVUID:=999}
+DEVGID=${DEVGID:=999}
+
+usermod --uid ${DEVUID} --gid ${DEVGID} developer

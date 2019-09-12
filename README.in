@@ -22,7 +22,9 @@ necessary environment variables and switches for painless usage:
         --env http_proxy=http://proxy:3128 \
         --env https_proxy=http://proxy:3128 \
         --env QT_SELECT=qt5 \
-        --volume $HOME/qml:/home/developer/qml:Z \
+        --volume $HOME/qml:/home/developer:Z \
+        --env DEVUID=$(id -u) \
+        --env DEVGID=$(id -g) \
         =NAMESPACE=/=IMAGE= \
         bash
     $ docker exec -ti qtcreator su - developer -c qtcreator
